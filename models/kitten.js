@@ -17,8 +17,6 @@ var kitten = {
         })
     }
 
-
-
 };
 
 module.exports = kitten;
