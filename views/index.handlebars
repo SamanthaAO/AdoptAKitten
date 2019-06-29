@@ -1,0 +1,33 @@
+<h1>Kittens!</h1>
+
+<h2>Kittens up for adoption!</h2>
+
+<ul>
+  {{#each kittens}}
+    {{#unless adopted}}
+      {{name}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Adopted Kittens!</h2>
+
+<ul>
+  {{#each kittens}}
+    {{#if adopted}}
+      {{name}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Put Kitten Up for Adoption</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="stray">Kitten Name:</label>
+    <input type="text" id="stray" name="name">
+  </div>
+
+
+  <button type="submit">Add Kitten</button>
+</form>
