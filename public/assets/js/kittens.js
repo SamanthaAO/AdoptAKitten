@@ -53,22 +53,23 @@ $(function () {
         $("#imageChoice").append(`<img src="/assets/img/kitten${imageCounter}.jpg" id="kittenImage" data-id="kitten${imageCounter}.jpg" alt="kitten ${imageCounter} image"></img>`);
     })
 
-    // $(".like-kitten").on("click", function(){
-    //     var id = $(this).data("id");
+    $(".like-kitten").on("click", function(){
+        var id = $(this).data("id");
+        var currentLikes = parseInt($(this).val());
+        console.log(currentLikes);
 
+        $.ajax("/api/kittens/likes/" + id, {
+            type: "PUT",
+            data: {likes: currentLikes + 1 }
+        }).then(
+            function () {
+                console.log("Kitten Liked");
+                // Reload the page to get the updated list
+                location.reload();
+            }
+        );
 
-    //     $.ajax("/api/kittens/:id", {
-    //         type: "PUT",
-    //         data: newKitten
-    //       }).then(
-    //         function() {
-    //           console.log("created new kitten");
-    //           // Reload the page to get the updated list
-    //           location.reload();
-    //         }
-    //       );
-
-    // })
+    })
 
     $(".change-adopted").on("click", function () {
         var id = $(this).data("id");
