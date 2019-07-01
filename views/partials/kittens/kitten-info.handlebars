@@ -1,0 +1,16 @@
+<li>
+  {{name}}
+  <br>
+  <img src="/assets/img/{{image}}" alt="kitten image">
+  <br>
+  <p>{{description}}</p>
+  <br>
+  <div>Likes: {{likes}}</div>
+  <br>
+  <button class="like-kitten" data-id="{{this.id}}"><i class="fa fa-heart" aria-hidden="true"></i>like</button>
+  <button class="change-adopted" data-id="{{this.id}}" data-newsleep="{{sleep}}">
+    {{#if adopted}}{{else}}ADOPT ME!{{/if}}
+  </button>
+
+
+</li>

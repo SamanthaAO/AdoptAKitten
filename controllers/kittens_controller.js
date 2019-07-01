@@ -14,15 +14,29 @@ router.get("/", function(req,res){
 });
 
 router.post("/api/kittens", function(req, res){
-    kitten.insertOne("name",req.body.name, function(result){
+    kitten.insertOne(["name","description","image"],[req.body.name, req.body.description, req.body.image], function(result){
         res.json({id: result.insertId});
     });
 });
 
-router.put("/api/kittens/:id", function(req, res){
+router.put("/api/kittens/adopted/:id", function(req, res){
     var condition = "id = " + req.params.id;
 
     kitten.updateOne({adopted: req.body.adopted}, condition, function(result){
+        if (result.changedRows == 0) {
+            // If no rows were changed, then the ID must not exist, so 404
+            return res.status(404).end();
+          } else {
+            res.status(200).end();
+          } 
+    });
+
+});
+
+router.put("/api/kittens/likes/:id", function(req, res){
+    var condition = "id = " + req.params.id;
+
+    kitten.updateOne({likes: req.body.likes}, condition, function(result){
         if (result.changedRows == 0) {
             // If no rows were changed, then the ID must not exist, so 404
             return res.status(404).end();

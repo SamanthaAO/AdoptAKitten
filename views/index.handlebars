@@ -2,30 +2,45 @@
 
 <h2>Kittens up for adoption!</h2>
 
-<ul>
+<ol>
   {{#each kittens}}
     {{#unless adopted}}
-      {{name}}
+   
+      {{> kittens/kitten-info adopted=false}}
+     
     {{/unless}}
   {{/each}}
-</ul>
+</ol>
 
 <h2>Adopted Kittens!</h2>
 
-<ul>
+<ol>
   {{#each kittens}}
     {{#if adopted}}
-      {{name}}
+      
+      {{> kittens/kitten-info adopted=true}}
     {{/if}}
   {{/each}}
-</ul>
+</ol>
 
 <h2>Put Kitten Up for Adoption</h2>
-<form class="create-form">
+<form class="create-kitten">
+
+<button type="button" id="left-button"><i class="fa fa-arrow-left"aria-hidden="true"></i> </button>
+      <div id="imageChoice"><img src="/assets/img/kitten0.jpg" id="kittenImage" data-id="kitten0.jpg"alt="kitten 0 image"> </div>
+        <button type="button" id="right-button"> <i class="fa fa-arrow-right"aria-hidden="true"></i></button>
 
   <div class="form-group">
-    <label for="stray">Kitten Name:</label>
-    <input type="text" id="stray" name="name">
+      
+
+
+    <label for="stray-name">Kitten Name:</label>
+    <input type="text" id="stray-name" name="name">
+<br>
+    <label for="stray-description">Description:</label>
+    <input type="text" id="stray-description" name="description">
+
+
   </div>
 
 

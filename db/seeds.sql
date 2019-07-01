@@ -1,1 +1,1 @@
-INSERT INTO kittens (name) VALUE ("Fievil"),("Prince Humperdinck"),("Bob");
+INSERT INTO kittens (name, description, image) VALUE ("Fievil","Kind of a monster, but in a cute way.","kitten10.jpg"),("Prince Humperdinck", "The cutest in all the land.","kitten9.jpg"),("Bob","Always down for snuggles","kitten8.jpg");
