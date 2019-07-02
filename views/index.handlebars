@@ -1,14 +1,22 @@
-<div class="container">
+<div class="container py-5">
 
-  
+  <div class="titleBorder">
+  <h1 class="text-center">Adopt a Kitten!</h1>
+<h3 class="text-center">The app that lets you adopt as many kittens as you want without becoming a crazy cat lady.</h3>
+<div class="titleDiv">
 
-    <h1 class="titleDiv text-center">Kittens!</h1>
-  
+    <img id="titleImage2"src="/assets/img/title2.png">
+    
+    {{!-- <img id="titleImage3"src="/assets/img/title3.png"> --}}
+    <img id="titleImage4" src="/assets/img/title4.png">
+
+  </div>
+  </div>
 
   <div class="row">
 
-    <div class="col-sm-6">
-      <h2>Kittens up for adoption!</h2>
+    <div class="col-sm-6 mt-5">
+      <h2 class = "text-center" >Kittens Up for Adoption</h2>
 
       <ol class="pl-0">
         {{#each kittens}}
@@ -21,8 +29,8 @@
       </ol>
     </div>
 
-    <div class="col-sm-6">
-      <h2>Adopted Kittens!</h2>
+    <div class="col-sm-6 mt-5">
+      <h2 class = "text-center">Adopted Kittens</h2>
 
       <ol class="pl-0">
         {{#each kittens}}

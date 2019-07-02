@@ -1,10 +1,10 @@
+
+
 #kittenImage {
     width: 150px;
 }
 
-.titleDiv {
-    border: 2px double black;
-}
+
 
 .fa-heart {
     color: red;
@@ -17,3 +17,54 @@ ol{
 .imageBackground{
     background-color: #f7f7f7;
 }
+
+.titleDiv {
+    
+    position: relative;
+}
+
+.titleBorder{
+    border: 5px double black;
+}
+
+/* #titleImage1 {
+    
+    position: absolute;
+    left: -10%;
+    top: -5%;
+} */
+
+#titleImage2 {
+    width: 20%;
+    position: absolute;
+    bottom: 0;
+    left: 2%;
+    
+}
+
+
+
+#titleImage4 {
+    width: 25%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+h1, h2, h4 {
+    font-family: 'Kalam', cursive;
+}
+
+h1, h2 {
+    text-decoration: underline;
+}
+
+h3{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
