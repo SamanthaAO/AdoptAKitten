@@ -1,16 +1,79 @@
-<li>
-  {{name}}
-  <br>
-  <img src="/assets/img/{{image}}" alt="kitten image">
-  <br>
-  <p>{{description}}</p>
-  <br>
-  <div>Likes: {{likes}}</div>
-  <br>
-  <button class="like-kitten" data-id="{{this.id}}" value="{{likes}}"><i class="fa fa-heart" aria-hidden="true"></i>like</button>
-  <button class="change-adopted" data-id="{{this.id}}" data-newsleep="{{sleep}}">
-    {{#unless adopted}}ADOPT ME! {{/unless}}
-  </button>
 
 
-</li>
+{{!-- <div class="container"> --}}
+  <div class="card mb-3">
+    <div class="row no-gutters">
+      <div class="imageBackground col-sm-4 d-flex align-items-center">
+        <img src="/assets/img/{{image}}" class="img-fluid" alt="kitten image">
+      </div>
+      <div class="col-sm-8">
+        <div class="card-block px-2">
+          <h4 class="card-title"><li>{{name}}</li></h4>
+          <p class="card-text">{{description}}</p>
+          <div>
+            <i class="fa fa-heart"aria-hidden="true"></i>{{likes}}
+              <button type="button" class=" btn btn-outline-dark like-kitten ml-2" data-id="{{this.id}}" value="{{likes}}"><i class="fa fa-thumbs-up"
+            aria-hidden="true"></i></button>
+            </div>
+        </div>
+      </div>
+    </div>
+{{#unless adopted}}
+    <div class="card-footer w-100 text-muted text-center">
+
+        <div class="change-adopted" data-id="{{this.id}}">
+          <button type="button" class="btn btn-outline-dark">ADOPT ME!</button>
+        </div>
+
+      
+    </div>
+    {{/unless}}
+  </div>
+{{!-- </div> --}}
+
+
+
+
+
+
+{{!-- <div class="row pb-3">
+  <li>
+
+    {{name}}
+
+
+    <div class="row">
+
+      <div class="col-sm-4">
+        <img src="/assets/img/{{image}}" alt="kitten image">
+      </div>
+
+      <div class="col-sm-8">
+        <div class="row">
+          <p class="mb-0">{{description}}</p>
+        </div>
+
+        <div class="row mb-2">
+          <div><i class="fa fa-heart"
+              aria-hidden="true"></i>{{likes}}</div>
+        </div>
+
+        <div class="row">
+
+          <button class="like-kitten" data-id="{{this.id}}" value="{{likes}}"><i class="fa fa-heart"
+              aria-hidden="true"></i>like</button>
+
+          <div class="change-adopted" data-id="{{this.id}}">
+            {{#if adopted}}<br> This kitten has found a loving home :) {{/if}}{{#unless adopted}}<button>ADOPT ME!
+            </button>{{/unless}}
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </li>
+</div> --}}

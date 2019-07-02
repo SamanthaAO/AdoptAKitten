@@ -1,4 +1,19 @@
-img {
-    width: 100px;
-    height: 100px;
+#kittenImage {
+    width: 150px;
+}
+
+.titleDiv {
+    border: 2px double black;
+}
+
+.fa-heart {
+    color: red;
+}
+
+ol{
+    list-style-position: inside
+}
+
+.imageBackground{
+    background-color: #f7f7f7;
 }

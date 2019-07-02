@@ -1,48 +1,76 @@
-<h1>Kittens!</h1>
+<div class="container">
 
-<h2>Kittens up for adoption!</h2>
+  
 
-<ol>
-  {{#each kittens}}
-    {{#unless adopted}}
-   
-      {{> kittens/kitten-info adopted=false}}
-     
-    {{/unless}}
-  {{/each}}
-</ol>
+    <h1 class="titleDiv text-center">Kittens!</h1>
+  
 
-<h2>Adopted Kittens!</h2>
+  <div class="row">
 
-<ol>
-  {{#each kittens}}
-    {{#if adopted}}
-      
-      {{> kittens/kitten-info adopted=true}}
-    {{/if}}
-  {{/each}}
-</ol>
+    <div class="col-sm-6">
+      <h2>Kittens up for adoption!</h2>
 
-<h2>Put Kitten Up for Adoption</h2>
-<form class="create-kitten">
+      <ol class="pl-0">
+        {{#each kittens}}
+        {{#unless adopted}}
 
-<button type="button" id="left-button"><i class="fa fa-arrow-left"aria-hidden="true"></i> </button>
-      <div id="imageChoice"><img src="/assets/img/kitten0.jpg" id="kittenImage" data-id="kitten0.jpg"alt="kitten 0 image"> </div>
-        <button type="button" id="right-button"> <i class="fa fa-arrow-right"aria-hidden="true"></i></button>
+        {{> kittens/kitten-info adopted=false}}
 
-  <div class="form-group">
-      
+        {{/unless}}
+        {{/each}}
+      </ol>
+    </div>
 
+    <div class="col-sm-6">
+      <h2>Adopted Kittens!</h2>
 
-    <label for="stray-name">Kitten Name:</label>
-    <input type="text" id="stray-name" name="name">
-<br>
-    <label for="stray-description">Description:</label>
-    <input type="text" id="stray-description" name="description">
+      <ol class="pl-0">
+        {{#each kittens}}
+        {{#if adopted}}
 
+        {{> kittens/kitten-info adopted=true}}
+        {{/if}}
+        {{/each}}
+      </ol>
+    </div>
 
   </div>
 
+<h2 class="text-center">Put Kitten Up for Adoption</h2>
 
-  <button type="submit">Add Kitten</button>
-</form>
+  <div class="row d-flex justify-content-center">
+    <form class="create-kitten">
+
+      <div clas="row">
+        <button type="button" class="btn btn-outline-dark d-inline-block" id="left-button"><i class="fa fa-arrow-left"
+            aria-hidden="true"></i> </button>
+        <div id="imageChoice" class="d-inline-block"><img src="/assets/img/kitten0.jpg" id="kittenImage" data-id="kitten0.jpg"
+            alt="kitten 0 image"> </div>
+        <button type="button" class="btn btn-outline-dark d-inline-block" id="right-button"> <i class="fa fa-arrow-right"
+            aria-hidden="true"></i></button>
+      </div>
+
+
+      <div class="form-group mt-2">
+        
+        <label for="stray-name">Kitten Name:</label><br>
+        <input type="text" class="form-control"id="stray-name" name="name">
+       
+        </div>
+
+        <div class="form-group">
+        
+        <label for="stray-description">Description:</label>
+        <textarea type="text" class="form-control" id="stray-description" name="description" rows="3"></textarea>
+        
+
+      </div>
+
+      <div clas="row">
+        <button type="submit" class="btn btn-outline-dark col-sm-12">Add Kitten</button>
+      </div>
+    </form>
+  </div>
+
+
+</div>
