@@ -1,22 +1,23 @@
 <div class="container py-5">
 
   <div class="titleBorder">
-  <h1 class="text-center">Adopt a Kitten!</h1>
-<h3 class="text-center">The app that lets you adopt as many kittens as you want without becoming a crazy cat lady.</h3>
-<div class="titleDiv">
+    <h1 class="text-center">Adopt a Kitten!</h1>
+    <h3 class="text-center">The app that lets you adopt as many kittens as you want without becoming a crazy cat lady.
+    </h3>
+    <div class="titleDiv">
 
-    <img id="titleImage2"src="/assets/img/title2.png">
-    
-    {{!-- <img id="titleImage3"src="/assets/img/title3.png"> --}}
-    <img id="titleImage4" src="/assets/img/title4.png">
+      <img id="titleImage2" src="/assets/img/title2.png">
 
-  </div>
+      
+      <img id="titleImage4" src="/assets/img/title4.png">
+
+    </div>
   </div>
 
   <div class="row">
 
     <div class="col-sm-6 mt-5">
-      <h2 class = "text-center" >Kittens Up for Adoption</h2>
+      <h2 class="text-center">Kittens Up for Adoption</h2>
 
       <ol class="pl-0">
         {{#each kittens}}
@@ -30,7 +31,7 @@
     </div>
 
     <div class="col-sm-6 mt-5">
-      <h2 class = "text-center">Adopted Kittens</h2>
+      <h2 class="text-center">Adopted Kittens</h2>
 
       <ol class="pl-0">
         {{#each kittens}}
@@ -44,34 +45,36 @@
 
   </div>
 
-<h2 class="text-center">Put Kitten Up for Adoption</h2>
+  <h2 class="text-center">Put Kitten Up for Adoption</h2>
 
-  <div class="row d-flex justify-content-center">
+  <div class="row">
     <form class="create-kitten">
-
-      <div clas="row">
-        <button type="button" class="btn btn-outline-dark d-inline-block" id="left-button"><i class="fa fa-arrow-left"
-            aria-hidden="true"></i> </button>
-        <div id="imageChoice" class="d-inline-block"><img src="/assets/img/kitten0.jpg" id="kittenImage" data-id="kitten0.jpg"
-            alt="kitten 0 image"> </div>
-        <button type="button" class="btn btn-outline-dark d-inline-block" id="right-button"> <i class="fa fa-arrow-right"
-            aria-hidden="true"></i></button>
-      </div>
-
-
-      <div class="form-group mt-2">
-        
-        <label for="stray-name">Kitten Name:</label><br>
-        <input type="text" class="form-control"id="stray-name" name="name">
-       
+      <div class="row d-flex align-items-center">
+        <div clas="col-sm-6">
+          <button type="button" class="btn btn-outline-dark d-inline-block" id="left-button"><i class="fa fa-arrow-left"
+              aria-hidden="true"></i> </button>
+          <div id="imageChoice" class="d-inline-block"><img src="/assets/img/kitten0.jpg" id="kittenImage"
+              data-id="kitten0.jpg" alt="kitten 0 image"> </div>
+          <button type="button" class="btn btn-outline-dark d-inline-block" id="right-button"> <i
+              class="fa fa-arrow-right" aria-hidden="true"></i></button>
         </div>
 
-        <div class="form-group">
-        
-        <label for="stray-description">Description:</label>
-        <textarea type="text" class="form-control" id="stray-description" name="description" rows="3"></textarea>
-        
+        <div class="col-sm-6">
+          <div class="form-group mt-2">
 
+            <label for="stray-name">Kitten Name:</label><br>
+            <input type="text" class="form-control" id="stray-name" name="name">
+
+          </div>
+
+          <div class="form-group">
+
+            <label for="stray-description">Description:</label>
+            <textarea type="text" class="form-control" id="stray-description" name="description" rows="3"></textarea>
+
+
+          </div>
+        </div>
       </div>
 
       <div clas="row">
